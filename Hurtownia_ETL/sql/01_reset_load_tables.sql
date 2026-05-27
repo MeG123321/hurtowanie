@@ -4,7 +4,7 @@
 BEGIN TRY
     BEGIN TRAN;
 
-    -- Fakty najpierw
+    -- Fakty najpierw (odwrotność kolejności ładowania)
     DELETE FROM dbo.Fakt_Aktywnosc_Czas;
     DELETE FROM dbo.Fakt_Wydatki;
     DELETE FROM dbo.Fakt_Przychody;

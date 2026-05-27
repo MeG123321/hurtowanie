@@ -59,7 +59,7 @@ Czyli najpierw ładowane są wymiary, a następnie fakty.
 1. Upewnij się, że `FinanseCzas_DW` istnieje i ma docelowy schemat.
 2. (Opcjonalnie) uruchom `sql/01_reset_load_tables.sql`.
 3. Otwórz `Hurtownia_ETL.sln` w Visual Studio (SSIS).
-4. Zweryfikuj połączenie do SQL Server (`.\\SQLEXPRESS` domyślnie).
+4. Zweryfikuj połączenie do SQL Server (`.\SQLEXPRESS` domyślnie).
 5. Uruchom `Package.dtsx`.
 
 Po wykonaniu pakiet scali dane z trzech baz Access do jednej hurtowni.
