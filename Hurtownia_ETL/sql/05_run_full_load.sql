@@ -4,6 +4,8 @@
   2) import z Access (M/B/D)
   3) ładowanie wymiarów
   4) ładowanie faktów
+
+  UWAGA: skrypt używa komend :r (SQLCMD mode).
 */
 
 :r .\01_create_staging_and_helpers.sql

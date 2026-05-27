@@ -5,6 +5,41 @@
 
 SET NOCOUNT ON;
 
+DECLARE @ConflictingPeople NVARCHAR(MAX);
+DECLARE @ConflictingPeopleCount INT;
+
+SELECT @ConflictingPeople =
+    STRING_AGG(CONCAT(c.imie, ' ', c.nazwisko), '; ')
+FROM (
+    SELECT DISTINCT TOP (10) a.imie, a.nazwisko
+    FROM etl.stg_osoba a
+    JOIN etl.stg_osoba b
+      ON a.imie = b.imie
+     AND a.nazwisko = b.nazwisko
+     AND (
+            ISNULL(a.plec, '') <> ISNULL(b.plec, '')
+         OR ISNULL(a.typ_wyksztalcenia, '') <> ISNULL(b.typ_wyksztalcenia, '')
+     )
+) c;
+
+SELECT @ConflictingPeopleCount = COUNT(*)
+FROM (
+    SELECT DISTINCT a.imie, a.nazwisko
+    FROM etl.stg_osoba a
+    JOIN etl.stg_osoba b
+      ON a.imie = b.imie
+     AND a.nazwisko = b.nazwisko
+     AND (
+            ISNULL(a.plec, '') <> ISNULL(b.plec, '')
+         OR ISNULL(a.typ_wyksztalcenia, '') <> ISNULL(b.typ_wyksztalcenia, '')
+     )
+) c;
+
+IF @ConflictingPeopleCount > 0
+BEGIN
+    THROW 50002, CONCAT('W etl.stg_osoba wykryto wiele wariantów plec/typ_wyksztalcenia dla ', @ConflictingPeopleCount, ' osoby/osób. Pierwsze wpisy: ', COALESCE(@ConflictingPeople, 'brak'), '. Ujednolić dane przed ładowaniem D_OSOBA.'), 1;
+END;
+
 INSERT INTO D_TYP_WYKSZTALCENIA(typ_wyksztalcenia)
 SELECT DISTINCT s.typ_wyksztalcenia
 FROM etl.stg_typ_wyksztalcenia s
@@ -69,7 +104,6 @@ WHERE NOT EXISTS (
     FROM D_OSOBA d
     WHERE d.imie = s.imie
       AND d.nazwisko = s.nazwisko
-      AND ISNULL(d.plec,'') = ISNULL(s.plec,'')
 );
 
 INSERT INTO D_MIEJSCOWOSC(miejscowosc, typ_miejscowosci_id)

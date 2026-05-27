@@ -49,6 +49,7 @@ Uruchamiaj skrypty w kolejności:
 lub jednorazowo:
 
 5. `05_run_full_load.sql`
+   - ten skrypt wymaga **SQLCMD Mode** (np. SSMS: Query -> SQLCMD Mode).
 
 ## Kolejność logiczna ładowania
 
