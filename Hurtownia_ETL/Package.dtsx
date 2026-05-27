@@ -37,7 +37,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=C:\Users\mateu\Desktop\Baza Finanse i Czas_B.accdb;Provider=Microsoft.ACE.OLEDB.12.0;Persist Security Info=False;" />
+          DTS:ConnectionString="Data Source=.\Sources\Baza Finanse i Czas_B.accdb;Provider=Microsoft.ACE.OLEDB.12.0;Persist Security Info=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -49,7 +49,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=C:\Users\mateu\Desktop\Baza Finanse i Czas_D.accdb;Provider=Microsoft.ACE.OLEDB.12.0;Persist Security Info=False;" />
+          DTS:ConnectionString="Data Source=.\Sources\Baza Finanse i Czas_D.accdb;Provider=Microsoft.ACE.OLEDB.12.0;Persist Security Info=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -61,7 +61,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=C:\Users\mateu\Desktop\Baza Finanse i Czas_M.accdb;Provider=Microsoft.ACE.OLEDB.12.0;Persist Security Info=False;" />
+          DTS:ConnectionString="Data Source=.\Sources\Baza Finanse i Czas_M.accdb;Provider=Microsoft.ACE.OLEDB.12.0;Persist Security Info=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
