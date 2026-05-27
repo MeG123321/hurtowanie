@@ -3,20 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "Hurtownia_ETL", "Hurtownia_ETL\Hurtownia_ETL.dtproj", "{1E574D05-6F1B-4C20-8A5F-D95C1BC7581F}"
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "Integration Services Project1", "Integration Services Project1\Integration Services Project1.dtproj", "{5B000EEB-A2F9-4AF5-9737-52C4583041E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|Default = Development|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1E574D05-6F1B-4C20-8A5F-D95C1BC7581F}.Development|Default.ActiveCfg = Development
-		{1E574D05-6F1B-4C20-8A5F-D95C1BC7581F}.Development|Default.Build.0 = Development
+		{5B000EEB-A2F9-4AF5-9737-52C4583041E8}.Development|Default.ActiveCfg = Development
+		{5B000EEB-A2F9-4AF5-9737-52C4583041E8}.Development|Default.Build.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {66CE0FB0-16B1-42FF-96C3-662797124EEC}
+		SolutionGuid = {282ED097-374E-4A4D-A6B1-8B1907A47D32}
 	EndGlobalSection
 EndGlobal
